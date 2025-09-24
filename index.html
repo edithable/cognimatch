@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CogniMatch - Descubre tu Futuro Profesional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #00A5DF, #0084b4);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .welcome-text {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .highlight {
+            color: #FF9933;
+            font-weight: bold;
+        }
+        
+        .options-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .option-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .option-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .free-badge {
+            background: #28a745;
+            color: white;
+        }
+        
+        .premium-badge {
+            background: #FF9933;
+            color: white;
+        }
+        
+        .option-title {
+            font-size: 2rem;
+            color: #2C3E50;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+        
+        .option-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .feature-list {
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            color: #555;
+            border-left: 3px solid;
+            padding-left: 15px;
+            margin: 10px 0;
+        }
+        
+        .free-features li {
+            border-color: #28a745;
+        }
+        
+        .premium-features li {
+            border-color: #FF9933;
+        }
+        
+        .option-button {
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .free-button {
+            background: #28a745;
+            color: white;
+        }
+        
+        .free-button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+        }
+        
+        .premium-button {
+            background: #FF9933;
+            color: white;
+        }
+        
+        .premium-button:hover {
+            background: #e6831a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 153, 51, 0.3);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            color: #00A5DF;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .comparison-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        
+        .comparison-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #2C3E50;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .welcome-text {
+                font-size: 1.1rem;
+            }
+            
+            .options-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¡Felicidades por dar el primer paso!</h1>
+            <div class="welcome-text">
+                Estás a punto de <span class="highlight">descubrir la mejor opción para tu futuro profesional</span>. 
+                Nuestro análisis vocacional científico te ayudará a tomar una de las decisiones más importantes de tu vida
+                con <span class="highlight">confianza y claridad</span>.
+                <br><br>
+                Miles de estudiantes ya han encontrado su camino ideal. <strong>Ahora es tu turno.</strong>
+            </div>
+        </div>
+        
+        <div class="options-container">
+            <!-- Opción Gratuita -->
+            <div class="option-card">
+                <div class="option-badge free-badge">GRATIS</div>
+                <div class="option-title">Análisis de Intereses</div>
+                <div class="price">$0 USD</div>
+                <div class="option-description">
+                    Descubre tus áreas de interés principales y obtén una primera orientación sobre tu perfil vocacional.
+                </div>
+                
+                <ul class="feature-list free-features">
+                    <li>Análisis de tus intereses vocacionales</li>
+                    <li>Gráfico personalizado de tu perfil</li>
+                    <li>Top 3 categorías donde destacas</li>
+                    <li>ID único para continuar después</li>
+                    <li>Reporte visual y atractivo</li>
+                    <li>Resultados en 24-48 horas</li>
+                </ul>
+                
+                <a href="instrucciones-gratis.html" class="option-button free-button">
+                    Comenzar Test Gratuito
+                </a>
+                
+                <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                    Ideal para una primera exploración
+                </p>
+            </div>
+            
+            <!-- Opción Premium -->
+            <div class="option-card">
+                <div class="option-badge premium-badge">PREMIUM</div>
+                <div class="option-title">Análisis Completo</div>
+                <div class="price">$39 USD</div>
+                <div class="option-description">
+                    Análisis integral de aptitudes, intereses y compatibilidad específica con carreras universitarias.
+                </div>
+                
+                <ul class="feature-list premium-features">
+                    <li>Análisis de 150+ dimensiones vocacionales</li>
+                    <li>Evaluación completa de aptitudes y habilidades</li>
+                    <li>Top 10 carreras más compatibles contigo</li>
+                    <li>Porcentaje exacto de compatibilidad por carrera</li>
+                    <li>Plan personalizado de desarrollo</li>
+                    <li>Reporte detallado profesional (15-20 páginas)</li>
+                    <li>Entrega personalizada en 24-48 horas</li>
+                </ul>
+                
+                <a href="instrucciones-premium.html" class="option-button premium-button">
+                    Comenzar Análisis Completo
+                </a>
+                
+                <p style="margin-top: 10px; color: #666; font-size: 0.9rem;">
+                    Recomendado para decisión definitiva
+                </p>
+                
+                <div style="margin-top: 15px;">
+                    <a href="promociones.html" style="color: #FF9933; text-decoration: none; font-size: 0.9rem; font-weight: bold;">
+                        🎁 ¿Tienes un código promocional?
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="comparison-section">
+            <h3 class="comparison-title">¿Por qué elegir CogniMatch?</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: center;">
+                <div>
+                    <div style="font-size: 3rem; color: #00A5DF; margin-bottom: 15px;">🎯</div>
+                    <h4 style="color: #2C3E50; margin-bottom: 10px;">Precisión Científica</h4>
+                    <p style="color: #666;">Basado en investigación psicométrica y validado con miles de estudiantes</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; color: #FF9933; margin-bottom: 15px;">⚡</div>
+                    <h4 style="color: #2C3E50; margin-bottom: 10px;">Resultados Rápidos</h4>
+                    <p style="color: #666;">Obtén claridad sobre tu futuro en menos de 48 horas</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; color: #28a745; margin-bottom: 15px;">👥</div>
+                    <h4 style="color: #2C3E50; margin-bottom: 10px;">Atención Personalizada</h4>
+                    <p style="color: #666;">Cada reporte es revisado y personalizado por nuestros expertos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    

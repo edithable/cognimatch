@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Seguro - Análisis Completo</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #00A5DF, #0084b4);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .package-summary {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #FF9933;
+        }
+        
+        .package-title {
+            font-size: 1.5rem;
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+        
+        .package-features {
+            list-style: none;
+        }
+        
+        .package-features li {
+            padding: 8px 0;
+            border-left: 3px solid #FF9933;
+            padding-left: 15px;
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .price-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(0,165,223,0.1), rgba(255,153,51,0.1));
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .price {
+            font-size: 3rem;
+            color: #00A5DF;
+            font-weight: bold;
+        }
+        
+        .price-note {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        .payment-button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #FF9933, #e6831a);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .payment-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 153, 51, 0.3);
+        }
+        
+        .security-info {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .stripe-logo {
+            margin-top: 15px;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pago Seguro</h1>
+            <p>Completa tu inversión en tu futuro profesional</p>
+        </div>
+        
+        <div class="content">
+            <div class="package-summary">
+                <h3 class="package-title">Análisis Vocacional Completo</h3>
+                <ul class="package-features">
+                    <li>Análisis de 150+ dimensiones vocacionales</li>
+                    <li>Evaluación completa de aptitudes y habilidades</li>
+                    <li>Top 10 carreras más compatibles contigo</li>
+                    <li>Porcentaje exacto de compatibilidad</li>
+                    <li>Plan personalizado de desarrollo</li>
+                    <li>Reporte detallado profesional (15-20 páginas)</li>
+                    <li>Entrega personalizada en 24-48 horas</li>
+                </ul>
+            </div>
+            
+            <div class="price-section">
+                <div class="price">$39 USD</div>
+                <div class="price-note">Precio final - Sin cargos adicionales</div>
+            </div>
+            
+            <button id="checkout-button" class="payment-button">
+                Proceder al Pago Seguro con Stripe
+            </button>
+            
+            <div class="security-info">
+                <p>🔒 Pago 100% seguro procesado por Stripe</p>
+                <p>Tus datos están protegidos con encriptación de nivel bancario</p>
+                <div class="stripe-logo">
+                    <p>Powered by <strong>Stripe</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Configuración de Stripe (reemplazar con tu clave pública)
+        const stripe = Stripe('pk_test_TU_CLAVE_PUBLICA_AQUI');
+        
+        document.getElementById('checkout-button').addEventListener('click', async () => {
+            // Aquí iría la lógica de Stripe Checkout
+            // Por ahora, redirigir directamente al test
+            alert('Simulando pago exitoso...');
+            window.location.href = 'test-completo.html';
+        });
+    </script>
+</body>
+</html>
+    

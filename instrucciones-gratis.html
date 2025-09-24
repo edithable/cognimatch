@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones - Análisis de Intereses</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #00A5DF, #0084b4);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .important-notice {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border: 3px solid #FF9933;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .important-notice h2 {
+            color: #2C3E50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .instruction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .instruction-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 5px solid #00A5DF;
+        }
+        
+        .instruction-card h3 {
+            color: #2C3E50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .instruction-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .checklist {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #e9ecef;
+        }
+        
+        .checklist h3 {
+            color: #2C3E50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .checklist-item input[type="checkbox"] {
+            margin-right: 15px;
+            transform: scale(1.3);
+            accent-color: #00A5DF;
+        }
+        
+        .start-button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #FF9933, #e6831a);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .start-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 153, 51, 0.3);
+        }
+        
+        .start-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        @media (max-width: 768px) {
+            .instruction-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Instrucciones Importantes</h1>
+            <p>Lee cuidadosamente antes de comenzar tu análisis de intereses</p>
+        </div>
+        
+        <div class="content">
+            <div class="important-notice">
+                <h2>🎯 Este Test Es Solo Para Ti</h2>
+                <p style="font-size: 1.1rem; color: #2C3E50; line-height: 1.6;">
+                    Los resultados reflejarán tu personalidad y aptitudes reales <strong>únicamente si respondes con total honestidad</strong>. 
+                    No trates de impresionar a nadie ni de dar las respuestas "correctas". 
+                    Las respuestas más auténticas te darán los resultados más precisos.
+                </p>
+            </div>
+            
+            <div class="instruction-grid">
+                <div class="instruction-card">
+                    <h3>🏠 Ambiente Ideal</h3>
+                    <p>Busca un lugar tranquilo donde puedas concentrarte sin interrupciones. Silencia tu teléfono y evita distracciones.</p>
+                </div>
+                
+                <div class="instruction-card">
+                    <h3>⏰ Tiempo Necesario</h3>
+                    <p>Aproximadamente 8-10 minutos. No te apresures, tómate el tiempo necesario para reflexionar.</p>
+                </div>
+                
+                <div class="instruction-card">
+                    <h3>💭 Forma de Responder</h3>
+                    <p>Piensa en ejemplos concretos de tu vida. Si nunca has tenido la experiencia, imagina cómo te sentirías en esa situación.</p>
+                </div>
+                
+                <div class="instruction-card">
+                    <h3>❤️ Honestidad Total</h3>
+                    <p>No hay respuestas buenas o malas. Responde basándote en quién eres realmente, no en quien crees que deberías ser.</p>
+                </div>
+            </div>
+            
+            <div class="checklist">
+                <h3>✅ Confirma que estás listo:</h3>
+                <div class="checklist-item">
+                    <input type="checkbox" id="ambiente" required>
+                    <label for="ambiente">Estoy en un lugar tranquilo sin distracciones</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="tiempo" required>
+                    <label for="tiempo">Tengo tiempo suficiente para completar el test sin prisa</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="honestidad" required>
+                    <label for="honestidad">Me comprometo a responder con total honestidad</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="solo" required>
+                    <label for="solo">Voy a responder yo mismo, sin ayuda de otras personas</label>
+                </div>
+            </div>
+            
+            <a href="test-gratuito.html" id="startButton" class="start-button" style="pointer-events: none; opacity: 0.5;">
+                Comenzar Test Gratuito
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const startButton = document.getElementById('startButton');
+        
+        function updateButton() {
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            
+            if (allChecked) {
+                startButton.style.pointerEvents = 'auto';
+                startButton.style.opacity = '1';
+            } else {
+                startButton.style.pointerEvents = 'none';
+                startButton.style.opacity = '0.5';
+            }
+        }
+        
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateButton);
+        });
+    </script>
+</body>
+</html>
+    

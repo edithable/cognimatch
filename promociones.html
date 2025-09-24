@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Promocional - CogniMatch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FF9933, #e6831a);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .promo-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .promo-form {
+            text-align: center;
+        }
+        
+        .form-group {
+            margin: 25px 0;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #2C3E50;
+            font-size: 1.1rem;
+        }
+        
+        .promo-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .promo-input:focus {
+            border-color: #FF9933;
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 153, 51, 0.2);
+        }
+        
+        .validate-button {
+            background: linear-gradient(135deg, #FF9933, #e6831a);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .validate-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 153, 51, 0.3);
+        }
+        
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .info-section h3 {
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .benefits-list li {
+            padding: 8px 0;
+            border-left: 3px solid #FF9933;
+            padding-left: 15px;
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .no-code-section {
+            background: linear-gradient(135deg, rgba(0,165,223,0.1), rgba(255,153,51,0.1));
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .no-code-section h4 {
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+        
+        .back-button {
+            background: #6c757d;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .back-button:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        .regular-button {
+            background: #00A5DF;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        .regular-button:hover {
+            background: #0084b4;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .promo-input {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="promo-icon">🎁</div>
+            <h1>Código Promocional</h1>
+            <p>Accede gratis al Análisis Completo</p>
+        </div>
+        
+        <div class="content">
+            <div class="promo-form">
+                <form id="promoForm">
+                    <div class="form-group">
+                        <label for="promoCode">Ingresa tu código promocional:</label>
+                        <input 
+                            type="text" 
+                            id="promoCode" 
+                            class="promo-input" 
+                            placeholder="XXXXXX"
+                            maxlength="10"
+                            required
+                        >
+                    </div>
+                    
+                    <button type="submit" class="validate-button">
+                        Validar Código
+                    </button>
+                </form>
+            </div>
+            
+            <div class="info-section">
+                <h3>🌟 Con tu código promocional obtienes:</h3>
+                <ul class="benefits-list">
+                    <li>Análisis vocacional completo GRATIS (valor $39 USD)</li>
+                    <li>Evaluación de 150+ dimensiones vocacionales</li>
+                    <li>Top 10 carreras más compatibles contigo</li>
+                    <li>Porcentaje exacto de compatibilidad por carrera</li>
+                    <li>Plan personalizado de desarrollo</li>
+                    <li>Reporte detallado profesional (15-20 páginas)</li>
+                    <li>Entrega personalizada en 24-48 horas</li>
+                </ul>
+            </div>
+            
+            <div class="no-code-section">
+                <h4>¿No tienes código promocional?</h4>
+                <p style="color: #666; margin-bottom: 20px;">
+                    Puedes obtener el análisis completo por $39 USD o comenzar con nuestro test gratuito de intereses.
+                </p>
+                <a href="instrucciones-premium.html" class="regular-button">Análisis Completo - $39</a>
+                <a href="instrucciones-gratis.html" class="regular-button">Test Gratuito</a>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="index.html" class="back-button">← Volver al inicio</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('promoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const promoCode = document.getElementById('promoCode').value.trim().toUpperCase();
+            
+            // Lista de códigos promocionales válidos (en implementación real, esto estaría en el servidor)
+            const validCodes = [
+                'GRATIS2024',
+                'STUDENT50',
+                'COGNIFREE',
+                'PROMO100',
+                'TESTFREE'
+            ];
+            
+            if (validCodes.includes(promoCode)) {
+                // Código válido - redirigir a instrucciones premium con parámetro especial
+                alert('¡Código válido! Serás redirigido al análisis completo gratuito.');
+                window.location.href = 'instrucciones-premium.html?promo=' + promoCode;
+            } else {
+                alert('Código promocional inválido. Por favor verifica el código e intenta nuevamente.');
+                document.getElementById('promoCode').focus();
+            }
+        });
+        
+        // Formatear entrada automáticamente
+        document.getElementById('promoCode').addEventListener('input', function(e) {
+            this.value = this.value.toUpperCase();
+        });
+    </script>
+</body>
+</html>
+    

@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu participación!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #28a745, #20a83a);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 2.2rem;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .message {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .id-container {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px solid #28a745;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .id-label {
+            font-size: 1rem;
+            color: #2C3E50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .id-value {
+            font-size: 2rem;
+            color: #28a745;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 2px;
+        }
+        
+        .id-instructions {
+            background: #fff3cd;
+            border-left: 4px solid #FF9933;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+        .id-instructions h4 {
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+        
+        .id-instructions ul {
+            margin-left: 20px;
+        }
+        
+        .id-instructions li {
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        .upgrade-section {
+            background: linear-gradient(135deg, #00A5DF, #0084b4);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .upgrade-section h4 {
+            margin-bottom: 15px;
+        }
+        
+        .upgrade-button {
+            background: #FF9933;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .upgrade-button:hover {
+            background: #e6831a;
+            transform: translateY(-2px);
+        }
+        
+        .timeline {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">🎉</div>
+        <h1 class="title">¡Gracias por completar tu test!</h1>
+        
+        <div class="message">
+            Tu análisis de intereses ha sido recibido exitosamente. Nuestro equipo procesará tus respuestas para crear tu reporte personalizado.
+        </div>
+        
+        <div class="id-container">
+            <div class="id-label">Tu ID único es:</div>
+            <div class="id-value" id="userId">CG12345678</div>
+        </div>
+        
+        <div class="id-instructions">
+            <h4>🔑 Importante - Guarda tu ID</h4>
+            <ul>
+                <li><strong>Anótalo o tómale foto</strong> - Lo necesitarás para el análisis completo</li>
+                <li><strong>Con este ID puedes continuar</strong> con el test premium sin repetir las preguntas de intereses</li>
+                <li><strong>Solo pagarías la diferencia</strong> y responderías las preguntas faltantes</li>
+            </ul>
+        </div>
+        
+        <div class="upgrade-section">
+            <h4>¿Quieres el análisis completo ahora?</h4>
+            <p>Descubre tus aptitudes específicas y obtén recomendaciones detalladas de carreras con tu porcentaje exacto de compatibilidad.</p>
+            <a href="upgrade-from-free.html" class="upgrade-button">Continuar con Análisis Completo</a>
+        </div>
+        
+        <div class="timeline">
+            <strong>📧 Recibirás tu reporte de intereses en 24-48 horas</strong><br>
+            Revisa tu bandeja de entrada y carpeta de spam
+        </div>
+    </div>
+    
+    <script>
+        // En la implementación real, este ID vendría del servidor
+        // document.getElementById('userId').textContent = 'ID_REAL_GENERADO';
+    </script>
+</body>
+</html>
+    
